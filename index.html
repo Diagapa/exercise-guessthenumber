@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="mainContainer">
+
+    <!-- Titolo -->
+    <header>
+      <h1 class="myTitle">INDOVINA IL NUMERO</h1>
+      <h2>Muovi gli slider per cambiare il range del numero da indovinare!</h2>
+    </header>
+
+    <!-- Gioco e parametri -->
+    <div class="gameContainer">
+
+      <!-- min slider -->
+      <div class="numContainer">
+        <p class="indicativeText">Min</p>
+        <input oninput="changeMinSlider()" class="rollNum" id="minInput" value="1"></input>
+        <input oninput="changeMinInput()" type="range" name="minSlider" id="minSlider" min="1" max="10" value="1">
+      </div>
+
+      <!-- Numero da indovinare -->
+      <div class="numberCard" id="numberCard">
+        <div onclick="revealNumber()" class="numberPosition" id="numberPosition">
+          ?
+        </div>
+
+      </div>
+
+      <!-- max slider -->
+      <div class="numContainer">
+        <p class="indicativeText">Max</p>
+        <input oninput="changeMaxSlider()" class="rollNum" id="maxInput" value="10"></input>
+        <input oninput="changeMaxInput()" type="range" name="maxSlider" id="maxSlider" min="1" max="100" value="10">
+      </div>
+
+    </div>
+
+    <!-- container inputs -->
+    <div class="inputContainer" id="inputContainer">
+
+      <!-- indizi -->
+      <p class="hint" id="hintTitle"></p>
+      <h2 class="hintMessage" id="hintMessage"></h2>
+
+      <!-- input player -->
+      <input type="text" class="myInput" id="myInput">
+      <button onclick="guessNumber()" class="guessBtn" id="guessBtn">GUESS</button>
+    </div>
+
+    <!-- Reroll button -->
+    <button onclick="randomize()" class="rerollBtn" id="rerollBtn">REROLL</button>
+
+
+  </div>
+  <script src="script.js" defer></script>
+</body>
+
+</html>

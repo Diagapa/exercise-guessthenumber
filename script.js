@@ -47,19 +47,19 @@ function guessNumber() {
     else {
       if (Math.abs(userNumber - rightNumber) >= 25) {
         console.log("è lotano di 20+, oceano");
-        insertHint("Oceano");
+        insertHint("OCEANO");
       } else if (Math.abs(userNumber - rightNumber) >= 15) {
         console.log("è lotano di 15+, acquazzone");
         insertHint("Acquazzone");
       } else if (Math.abs(userNumber - rightNumber) >= 8) {
         console.log("è lotano di 10+, acqua");
-        insertHint("Fuoco");
+        insertHint("Fuochino");
       } else if (Math.abs(userNumber - rightNumber) >= 4) {
         console.log("è lotano di 5+, fuoco");
-        insertHint("fuochino");
+        insertHint("Fuoco");
       } else {
         console.log("è lotano di 3, FUOCHINO FUOCHINO");
-        insertHint("FUOCHINO FUOCHINO");
+        insertHint("FUOCONE");
       }
     }
   } else {
@@ -150,3 +150,4 @@ function changeMaxInput() {
 //     `Your number "${userNumber}"is too... CORRECT! (number to guess: ${rightNumber})`
 //   );
 // }
+
